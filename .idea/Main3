@@ -1,0 +1,29 @@
+        import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            int []arr = new int[12];
+            for(int i = 0 ;i<arr.length;i++){
+                arr[i]=sc.nextInt();
+            }
+            int p = 0;
+            int sum= 0;
+            for(int j = 0;j<arr.length;j++){
+                sum+=300-arr[j];
+                if(sum>=100){
+                    p+=sum/100;
+                    sum%=100;
+
+                }else if(sum<0){
+                    System.out.println("-"+(j+1));
+                    break;
+                }//不能是elseif 否则不出答案。
+                if(j+1==arr.length){
+                    System.out.println((int)(p*100+p*100*0.2+sum));
+                }
+            }
+        }
+    }
+}
