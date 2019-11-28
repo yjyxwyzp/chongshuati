@@ -1,0 +1,24 @@
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+         int []arr = new int[7];
+         int[]arrs = new int[7];
+         for(int i = 0;i<arr.length;i++){
+             int a = sc.nextInt();
+             int b = sc.nextInt();
+             arr[i]=a+b;
+             arrs[i]=a+b;
+         }
+            Arrays.sort(arrs);
+            int max = arrs[arrs.length-1];
+            for(int i = 0;i<arr.length;i++){
+                if(arr[i]==max){
+                    System.out.println(i+1);
+                    break;
+                }
+            }
+        }
+    }
+}
