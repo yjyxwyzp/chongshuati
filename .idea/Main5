@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		for (int i = 123; i <= 329; i++) {
+			int n1 = i * 2;
+			int n2 = i * 3;
+			int x1 = i / 100;
+			int x2 = i / 10 % 10;
+			int x3 = i - (x1 * 100) - (x2 * 10);
+			int y1 = n1 / 100;
+			int y2 = n1 / 10 % 10;
+			int y3 = n1 - (y1 * 100) - (y2 * 10);
+			int z1 = n2 / 100;
+			int z2 = n2 / 10 % 10;
+			int z3 = n2 - (z1 * 100) - (z2 * 10);
+			if(i==267) {
+				continue;
+			}
+			if (x1 != x2 & x1 != x3 & x1 != y1 & x1 != y2 & x1 != y3 & x1 != z1 & x1 != z2 & x1 != z3 & x2 != x3
+					& x2 != y1 & x2 != y2 & x2 != y3 & x2 != z1 & x2 != z2 & x2 != z3 & x3 != y1 & x3 != y2 & x3 != y3
+					& x3 != z1 & x3 != z2 & x3 != z3 & y1 != y2 & y1 != y3 & y1 != z1 & y1 != z2 & y1 != z3 & y2 != y3
+					& y2 != z1 & y2 != z2 & y2 != z3 & y3 != z1 & y3 != z2 & y3 != z3 & z1 != z2 & z1 != z3
+					& z2 != z3) {
+				System.out.println(i + " " + n1 + " " + n2);
+			}
+		}
+	}
+}
